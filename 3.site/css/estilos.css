@@ -10,6 +10,7 @@ body{
     margin: 0px;
 }
 
+
 #chamada{
     background-color: #2283c9;
     padding: 20px;
@@ -38,6 +39,7 @@ body{
 
 #cursos article img{
     height: 200px;
+    width: 100%;
     max-width: 100%;
 }
 
@@ -66,5 +68,9 @@ body{
     /*Apenas os article pares*/
     #cursos article:nth-child(even){
         margin-left: 20px;
+    }
+
+    #cursos article img{
+        width: 70%;
     }
 }
