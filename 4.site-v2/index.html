@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <title>Cursos Online</title>
+
+</head>
+<body>
+    <!-- Cabeçalho do site -->
+    <header class="text-center">
+        <img src="img/logo.png" alt="Logo do site" height="160"/>
+    </header>
+
+    <!-- Grupo de conteúdo -->
+    <section class="p-5 text-center bg-primary text-light">
+        <!-- 1vw = 1% da largura da janela 
+        Se a janela de visualização tiver 50 cm de largura, 1vw será de 0,5 cm.
+        -->
+        <h2 style="font-size:4vw;">O melhor site de cursos online</h2>
+    </section>
+
+    <!-- class="container-fluid -->
+    <main class="container">
+        <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Cadastro</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Novidades</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Sobre</a>
+            </li>
+          </ul>
+        <div class="row justify-content-md-center">
+            <!--
+                mt-3 margin top 3
+            -->
+            <div class="col col-lg mt-3">
+                <div class="card">
+                    <img src="img/curso-spring-boot.png" height="200" alt="Curso Spring Boot"/>
+                    <div class="card-body">
+                        <h2 class="card-title">Curso de Spring Boot</h2>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a class="btn btn-primary" data-toggle="modal" data-target="#cursoModal"  href="comprar.html">Comprar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col col-lg mt-3">
+                <div class="card">
+                    <img src="img/curso-ionic.jpg" height="200"  alt="Curso de IONIC"/>
+                    <div class="card-body">
+                        <h2 class="card-title">Curso de IONIC</h2>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a class="btn btn-primary" data-toggle="modal" data-target="#cursoModal"  href="comprar.html">Comprar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-md-center">
+            <div class="col col-lg mt-3">
+                <div class="card">
+                    <img src="img/curso-dotnet.jpeg" height="200"  alt="Curso DotNet Core"/>
+                    <div class="card-body">
+                        <h2 class="card-title">Curso DotNet Core</h2>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a class="btn btn-primary" data-toggle="modal" data-target="#cursoModal"  href="comprar.html">Comprar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col col-lg mt-3">
+                <div class="card">
+                    <img src="img/curso-angularjs.jpg" height="200"  alt="Curso de AngularJs"/>
+                    <div class="card-body">
+                        <h2 class="card-title">Curso de AngularJs</h2>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a class="btn btn-primary" data-toggle="modal" data-target="#cursoModal" href="comprar.html">Comprar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="cursoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Adicionar curso</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Confirmar a compra do curso?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary">Comprar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+     <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
