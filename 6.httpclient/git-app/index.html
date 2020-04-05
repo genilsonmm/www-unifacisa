@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git app</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="alert alert-success" role="alert">
+            Projeto App Git
+          </div>
+        <div class="row">
+            <div class="col-3">
+                <a href="index.html">Início</a>
+            </div>
+            <div class="col">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th><strong>Avatar</strong></th>
+                            <th><strong>Id</strong></th>
+                            <td><strong>Login</strong></td>
+                            <td><strong>Url</strong></td>
+                        </tr>
+                    </thead>
+                    <tbody id="user_table">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+    <script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/scripts.js"></script> 
+
+    <script>
+        $(document).ready(function(){
+            $(".alert").html("Projeto App Git com javascript e JQuery");
+        });      
+    </script>
+</body>
+</html>
