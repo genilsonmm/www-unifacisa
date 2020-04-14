@@ -1,0 +1,19 @@
+html{
+    padding: 10px;
+}
+
+#header{
+    text-align: center;
+    background-color: #171717;
+    padding: 20px;
+}
+
+#header h4{
+    color:#f3f3f3;
+    font-size: 28px;
+    text-transform: uppercase;
+}
+
+button{
+    float: right;
+}

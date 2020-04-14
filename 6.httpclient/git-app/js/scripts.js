@@ -1,24 +1,36 @@
-const url =  "https://api.github.com/users";
+const urlApiGit =  "https://api.github.com/users";
 
 window.onload = function(){
-    getUsers();
+    $(".text-danger").hide();
+    getUsers();  
 }
 
-function getUsers(){
-    //Javascript
+function getUsers(oneUser){
+    //Verifica se oneUser existe
+    let url = oneUser ? `${urlApiGit}/${oneUser}` : urlApiGit;
+
     let request = new XMLHttpRequest();
     request.open('GET', url);
     request.responseType = 'json';
     request.send();
 
     request.onload = function() {
-        var users = request.response;
+        var responseData = request.response;
 
-        showUsers(users);
+        //Se for passado o user name como parametro
+        if(oneUser){
+            showOneUser(responseData);
+        }
+        else{         
+            showUsers(responseData);
+        }
     }
 }
 
 function showUsers(users){
+    
+    $("#user_table").empty();
+
     for(let i=0;  i < users.length; i++){
         let user = {
             avatar: users[i].avatar_url,
@@ -29,6 +41,36 @@ function showUsers(users){
         createTableElements(user);
     }
 }
+
+//Esconde a tabela e exibe os dados o usuário
+function showOneUser(user){
+
+    $("#homeContent").hide();
+
+    $("#userContent").show(); 
+    $("#userContent").empty(); 
+
+    if(user.name == null)
+    {
+        $("#userContent").append(`Usuário não encontrado! <br>`);
+    }
+    else{
+        $("#userContent").append(`Usuário: ${user.login} <br>`);
+        $("#userContent").append(`<img src='${user.avatar_url}' alt=${user.avatar_url} width=200 /> <br>`);
+        $("#userContent").append(`Nome: ${user.name} <br>`);
+        $("#userContent").append(`${user.location} <br>`);
+        $("#userContent").append(`<a href='${user.html_url}' target='_blank'>${user.html_url}</a> <br>`);
+    }
+
+    $("#userContent").append("<a id='voltar' href='#'>Voltar</a>");
+}
+
+//'Escuta' o evento de clik. Esconde os dados do usuário e exibe a tabela
+$(document).on('click', '#voltar', function() { 
+    $("#userContent").hide();
+    $("#homeContent").show(); 
+});
+
 
 function createTableElements(user){
  
@@ -56,3 +98,17 @@ function createTableElements(user){
 
     $("#user_table").append("</tr>");
 }
+
+//Evento de click da pesquisa por usuário
+$("button").click(function(){
+    let userName = $("input").val();
+
+    if(userName === ''){
+        $(".text-danger").show();
+    }
+    else{
+        $(".text-danger").fadeOut(5000);
+        $("input").val("");
+        getUsers(userName);
+    }
+});

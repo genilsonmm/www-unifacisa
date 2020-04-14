@@ -10,29 +10,34 @@
     <div class="container">
         <div class="alert alert-success" role="alert">
             Projeto App Git
-          </div>
+        </div>
 		  
         <div class="row">
             <div class="col-3">
 				<label>Usuário</label> <br>
-				<input type="text" />
-				<button class="mt-2 btn btn-primary">Pesquisar</button>
+                <input type="text" /> 
+                <div class="text-danger">Digite um usuário válido</div>
+                <button class="mt-2 btn btn-primary">Pesquisar</button>               
             </div>
             <div class="col">
-				<h4 id="titulo">Primeiros usuários do GitHub</h4>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th><strong>Avatar</strong></th>
-                            <th><strong>Id</strong></th>
-                            <td><strong>Login</strong></td>
-                            <td><strong>Url</strong></td>
-                        </tr>
-                    </thead>
-                    <tbody id="user_table">
+                <!-- Acrescentei as tags homeContente e userContent -->
+                <div id="homeContent">
+				    <h4 id="titulo">Primeiros usuários do GitHub</h4>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th><strong>Avatar</strong></th>
+                                <th><strong>Id</strong></th>
+                                <td><strong>Login</strong></td>
+                                <td><strong>Url</strong></td>
+                            </tr>
+                        </thead>
+                        <tbody id="user_table">
 
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="userContent"></div>
             </div>
         </div>
 
@@ -51,12 +56,6 @@
 			$("#titulo").click(function(){
 				$("#titulo").fadeOut(1000);
 			});
-            
-            $("button").click(function(){
-                let userName = $("input").val();
-                console.log(userName);
-                $("input").val("");
-            });
         });      
     </script>
 </body>
