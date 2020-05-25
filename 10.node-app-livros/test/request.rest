@@ -1,0 +1,13 @@
+GET http://localhost:3000/api/livros
+
+###
+GET http://localhost:3000/api/livros/1
+
+###
+POST http://localhost:3000/api/livro
+Content-Type: application/json
+
+{
+    "titulo" : "Entrega contínua",
+    "paginas" : 689 
+}
