@@ -39,9 +39,9 @@
             <li class="nav-item">
               <a class="nav-link" href="#">Novidades</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#">Sobre</a>
-            </li>
+            <a class="nav-link disabled" href="#">
+              Carrinho <span id="itens_carrinho" class="badge badge-primary">0</span>
+            </a>
           </ul>
         <div id="livros" class="row justify-content-md-center">
            
@@ -81,9 +81,13 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
+    <script src="js/carrinho.js"></script>
+
     <script>
 
         $(document).ready(function(){
+
+          $("#itens_carrinho").text(obterItens().length)
 
             $.ajax({
                 type: 'GET', 
@@ -102,20 +106,20 @@
 
                   retorno.forEach(livro => {
                     console.log(livro)
-                    let card = obterCard(livro.titulo, livro.paginas, livro.imagem)
+                    let card = obterCard(livro.titulo, livro.paginas, livro.imagem, livro.id)
                     $("#livros").append(card)
                   }); 
                 } 
             }); 
 
-            function obterCard(titulo, paginas, imagem){
+            function obterCard(titulo, paginas, imagem, id){
               let card = `<div class="col col-lg mt-3">
                             <div class="card">
                                 <img src="${imagem}" height="200" alt="${titulo}"/>
                                 <div class="card-body">
                                     <h2 class="card-title">${titulo}</h2>
                                     <p class="card-text">Páginas: ${paginas}</p>
-                                    <a class="btn btn-primary" data-toggle="modal" data-target="#cursoModal" href="comprar.html">Comprar</a>
+                                    <a class="btn btn-primary" href="detalhes.html?id=${id}">Comprar</a>
                                 </div>
                             </div>
                         </div>`

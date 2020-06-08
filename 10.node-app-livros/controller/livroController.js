@@ -9,7 +9,7 @@ module.exports = function(router){
 
     router.get('/livros/:id', (request, response) =>{
         let id = request.params.id
-        let livro = database.filter(livro => livro.id == id)
+        let livro = database.filter(livro => livro.id == id)[0]
         response.json(livro)
     })
 
