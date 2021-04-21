@@ -1,0 +1,101 @@
+body{
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#corpo{
+    margin: auto;
+    width: 90%;
+    text-align: center;
+}
+
+#topo{
+    background-color: #15405A;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    font-size: 12px;
+}
+
+#banner{
+    position: relative;
+    width: 100%;
+    margin: auto;
+}
+
+#banner img{
+    width: 100%;
+}
+
+#banner p{
+    position: absolute;
+    bottom: 25px;
+    left: 5px;
+    background-color: #000;
+    opacity: 0.5;
+    color: #fff;
+    padding: 10px;
+    font-size: 12px;
+}
+
+#rodape{
+    background-color: #002a44;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    font-size: 12px;
+    clear: both;
+}
+
+.game{
+    border-radius: 5px;
+    border: 0px solid #000;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.game img{
+    height: 320px;
+    width: 100%;
+}
+
+.game h2 {
+    font-size: 18px;
+    color: #002a44;
+}
+
+.botao{
+    background-color: #002a44;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+@media (min-width: 900px){
+    #banner p{
+        font-size: 22px;
+        bottom: 60px;
+    }
+
+    #topo{
+        font-size: 18px;
+    }
+
+    #rodape{
+        font-size: 18px;
+    }
+
+    .game {
+        float: left;
+        width: calc(50% - 10px);
+    }
+
+    .game img {
+        width: 70%;
+    }
+
+    .game:nth-child(even){
+        margin-left: 10px;
+    }
+}
