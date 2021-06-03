@@ -1,0 +1,13 @@
+GET http://localhost:3000/api/v1/livros
+
+###
+GET http://localhost:3000/api/v1/livro/4
+
+###
+POST http://localhost:3000/api/v1/livro
+Content-Type: application/json
+
+{
+    "titulo": "livro teste",
+    "paginas": 673
+}
